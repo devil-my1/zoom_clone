@@ -9,8 +9,7 @@ import Loader from "./Loader"
 import { toast } from "sonner"
 
 const CallList = ({ type }: { type: "upcoming" | "ended" | "recordings" }) => {
-	const { calls, isLoading, endedCalls, upcomingCalls, callRecordings } =
-		useGetCalls()
+	const { isLoading, endedCalls, upcomingCalls, callRecordings } = useGetCalls()
 	const [recordings, setRecordings] = useState<CallRecording[]>([])
 	const router = useRouter()
 
@@ -57,7 +56,7 @@ const CallList = ({ type }: { type: "upcoming" | "ended" | "recordings" }) => {
 	) : (
 		<div className='grid grid-cols-1 gap-5 xl:grid-cols-3'>
 			{callsList && callsList.length > 0 ? (
-				callsList.map((meeting: Call | CallRecording, index) => (
+				callsList.map((meeting: Call | CallRecording) => (
 					<MeetingCard
 						key={(meeting as Call)?.id}
 						icon={

@@ -5,7 +5,6 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "./ui/button"
 import { avatarImages } from "@/constants"
-import { toast } from "sonner"
 import CopyButton from "./CopyButton"
 
 const MeetingCard = ({
