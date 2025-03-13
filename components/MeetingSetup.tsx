@@ -28,7 +28,7 @@ const MeetingSetup = ({ setIsSetupCompelete }: MeetingSetupProps) => {
 	return (
 		<div className='meeting-setup'>
 			<h1 className='text-2xl font-bold'>Setup</h1>
-			{/* <VideoPreview className='size-full' /> */}
+			<VideoPreview className='size-full' />
 			<div className='flex h-16 items-center justify-center gap-3 '>
 				<label className='flex items-center justify-center gap-2 font-medium w-full'>
 					<input
